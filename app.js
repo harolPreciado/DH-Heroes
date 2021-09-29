@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const port = process.env.PORT || 3030;
 
 app.use(express.static(path.resolve(__dirname,'public')));  //Esta linea siempre antes de las rutas
 
@@ -49,4 +50,4 @@ app.get('/turing',(req,res)=>{
 	res.sendFile(htmlPath);
 });
 
-app.listen(3030, () => console.log('DH Server corriendo puerto 3030'))  //Esta linea siempre al final
+//app.listen(3030, () => console.log('DH Server corriendo puerto 3030'))  //Esta linea siempre al final
